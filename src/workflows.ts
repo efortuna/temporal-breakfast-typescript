@@ -10,13 +10,10 @@ const { getBowl, putBowlAway, addCereal, putCerealBackInBox, addMilk } =
 type Compensation = () => Promise<void>
 
 export async function breakfastWorkflow(): Promise<void> {
- console.log('one')
  const compensations: Compensation[] = []
  try {
-  console.log('two')
    await getBowl()
    compensations.unshift(putBowlAway)
-   console.log('three')
    await addCereal()
    compensations.unshift(putCerealBackInBox)
 

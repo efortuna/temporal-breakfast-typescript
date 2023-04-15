@@ -1,8 +1,4 @@
-# Hello World
-
-This is the default project that is scaffolded out when you run `npx @temporalio/create@latest ./myfolder`.
-
-The [Hello World Tutorial](https://learn.temporal.io/getting_started/typescript/hello_world_in_typescript/) walks through the code in this sample.
+# Compensating Transactions: A silly illustration of the this design pattern in Temporal through breakfast
 
 ### Running this sample
 
@@ -11,8 +7,10 @@ The [Hello World Tutorial](https://learn.temporal.io/getting_started/typescript/
 1. `npm run start.watch` to start the Worker.
 1. In another shell, `npm run workflow` to run the Workflow Client.
 
-The Workflow should return:
+In the first shell (where you ran `npm run start.watch`) watch for logging output:
 
 ```bash
-Hello, Temporal!
+Getting bowl
+Adding cereal
+Adding milk
 ```

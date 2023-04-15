@@ -11,14 +11,12 @@ async function run() {
   });
 
   const handle = await client.workflow.start(breakfastWorkflow, {
-    taskQueue: 'taskQueue',
+    args: [],
+    taskQueue: 'make-breakfast',
     // in practice, use a meaningful business ID, like customerId or transactionId
     workflowId: 'workflow-' + nanoid(),
   });
   console.log(`Started workflow ${handle.workflowId}`);
-
-  // optional: wait for client result
-  console.log(await handle.result()); // Hello, Temporal!
 }
 
 run().catch((err) => {
